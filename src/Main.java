@@ -5,7 +5,6 @@ import javax.swing.DefaultListModel;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 
-
 public class Main extends javax.swing.JFrame {
 
     /**
@@ -13,6 +12,7 @@ public class Main extends javax.swing.JFrame {
      */
     public Main() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -24,6 +24,10 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        pp_deltree = new javax.swing.JPopupMenu();
+        mi_modificar = new javax.swing.JMenuItem();
+        mi_eliminar = new javax.swing.JMenuItem();
+        JF_agregar = new javax.swing.JFrame();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -42,12 +46,58 @@ public class Main extends javax.swing.JFrame {
         agilidadmental = new javax.swing.JSpinner();
         vida = new javax.swing.JSpinner();
         agregar = new javax.swing.JButton();
+        agregar1 = new javax.swing.JButton();
+        JF_listar = new javax.swing.JFrame();
         jScrollPane1 = new javax.swing.JScrollPane();
         jt_arbol = new javax.swing.JTree();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        jl_listaloca = new javax.swing.JList<>();
+        jLabel12 = new javax.swing.JLabel();
+        jt_nombredelmaje = new javax.swing.JTextField();
+        SALIR = new javax.swing.JButton();
+        jd_modificar = new javax.swing.JDialog();
+        jLabel16 = new javax.swing.JLabel();
+        universo1 = new javax.swing.JComboBox<>();
+        agilidadfisica1 = new javax.swing.JSpinner();
+        jLabel18 = new javax.swing.JLabel();
+        debilidad1 = new javax.swing.JTextField();
+        jLabel20 = new javax.swing.JLabel();
+        vida1 = new javax.swing.JSpinner();
+        fuerza1 = new javax.swing.JSpinner();
+        jLabel19 = new javax.swing.JLabel();
+        poder1 = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        agilidadmental1 = new javax.swing.JSpinner();
+        nombre1 = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jd_batalla = new javax.swing.JDialog();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jb_listar = new javax.swing.JButton();
+        jb_batalla = new javax.swing.JButton();
+        jb_agregar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        mi_modificar.setText("Modificar");
+        mi_modificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mi_modificarActionPerformed(evt);
+            }
+        });
+        pp_deltree.add(mi_modificar);
+
+        mi_eliminar.setText("Eliminar");
+        mi_eliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mi_eliminarActionPerformed(evt);
+            }
+        });
+        pp_deltree.add(mi_eliminar);
+
+        JF_agregar.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        JF_agregar.setPreferredSize(new java.awt.Dimension(508, 400));
+        JF_agregar.setSize(new java.awt.Dimension(508, 400));
 
         jLabel1.setText("Agregar Personajes ");
 
@@ -89,6 +139,108 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
+        agregar1.setText("SALIR");
+        agregar1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                agregar1MouseClicked(evt);
+            }
+        });
+        agregar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                agregar1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout JF_agregarLayout = new javax.swing.GroupLayout(JF_agregar.getContentPane());
+        JF_agregar.getContentPane().setLayout(JF_agregarLayout);
+        JF_agregarLayout.setHorizontalGroup(
+            JF_agregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF_agregarLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(227, 227, 227))
+            .addGroup(JF_agregarLayout.createSequentialGroup()
+                .addGroup(JF_agregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JF_agregarLayout.createSequentialGroup()
+                        .addGap(49, 49, 49)
+                        .addGroup(JF_agregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel5))
+                        .addGap(18, 18, 18)
+                        .addGroup(JF_agregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(nombre)
+                            .addComponent(poder)
+                            .addComponent(debilidad)
+                            .addComponent(universo, 0, 96, Short.MAX_VALUE)))
+                    .addGroup(JF_agregarLayout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(agregar, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(56, 56, 56)
+                .addGroup(JF_agregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JF_agregarLayout.createSequentialGroup()
+                        .addGroup(JF_agregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel6))
+                        .addGap(18, 18, 18)
+                        .addGroup(JF_agregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(fuerza)
+                            .addComponent(agilidadfisica)
+                            .addComponent(agilidadmental)
+                            .addComponent(vida)))
+                    .addComponent(agregar1, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(26, Short.MAX_VALUE))
+        );
+        JF_agregarLayout.setVerticalGroup(
+            JF_agregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JF_agregarLayout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(jLabel1)
+                .addGap(26, 26, 26)
+                .addGroup(JF_agregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JF_agregarLayout.createSequentialGroup()
+                        .addGroup(JF_agregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
+                            .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(JF_agregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(poder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(JF_agregarLayout.createSequentialGroup()
+                        .addGroup(JF_agregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel6)
+                            .addComponent(fuerza, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(JF_agregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel7)
+                            .addComponent(agilidadfisica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(JF_agregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel8)
+                            .addComponent(agilidadmental, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(debilidad)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(JF_agregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel9)
+                            .addComponent(vida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(universo)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(18, 18, 18)
+                .addGroup(JF_agregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(agregar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(agregar1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(25, 25, 25))
+        );
+
+        JF_listar.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        JF_listar.setPreferredSize(new java.awt.Dimension(800, 600));
+        JF_listar.setSize(new java.awt.Dimension(800, 600));
+
         javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Personajes");
         javax.swing.tree.DefaultMutableTreeNode treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("DC");
         treeNode1.add(treeNode2);
@@ -99,102 +251,242 @@ public class Main extends javax.swing.JFrame {
         treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("MK");
         treeNode1.add(treeNode2);
         jt_arbol.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jt_arbol.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jt_arbolMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jt_arbol);
 
-        jList1.setModel(new DefaultListModel());
-        jScrollPane2.setViewportView(jList1);
+        jl_listaloca.setModel(new DefaultListModel());
+        jScrollPane2.setViewportView(jl_listaloca);
+
+        jLabel12.setFont(new java.awt.Font("Perpetua Titling MT", 1, 18)); // NOI18N
+        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel12.setText("Listar Personajes");
+
+        jt_nombredelmaje.setFont(new java.awt.Font("Segoe UI Semilight", 1, 12)); // NOI18N
+        jt_nombredelmaje.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        SALIR.setText("SALIR");
+        SALIR.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                SALIRMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout JF_listarLayout = new javax.swing.GroupLayout(JF_listar.getContentPane());
+        JF_listar.getContentPane().setLayout(JF_listarLayout);
+        JF_listarLayout.setHorizontalGroup(
+            JF_listarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JF_listarLayout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addGroup(JF_listarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(JF_listarLayout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(36, 36, 36)
+                        .addComponent(SALIR))
+                    .addComponent(jLabel12))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                .addGroup(JF_listarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane2)
+                    .addComponent(jt_nombredelmaje))
+                .addGap(67, 67, 67))
+        );
+        JF_listarLayout.setVerticalGroup(
+            JF_listarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JF_listarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                .addGroup(JF_listarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JF_listarLayout.createSequentialGroup()
+                        .addComponent(jt_nombredelmaje)
+                        .addGroup(JF_listarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(JF_listarLayout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(JF_listarLayout.createSequentialGroup()
+                                .addGap(103, 103, 103)
+                                .addComponent(SALIR))))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(54, 54, 54))
+        );
+
+        jLabel16.setText("Agilidad Fisica:");
+
+        universo1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "DC", "Marvel", "Capcom", "MK" }));
+
+        agilidadfisica1.setValue(100);
+
+        jLabel18.setText("Poder:");
+
+        jLabel20.setText("Fuerza:");
+
+        vida1.setValue(100);
+
+        fuerza1.setValue(100);
+
+        jLabel19.setText("Nombre:");
+
+        jLabel17.setText("Debilidad:");
+
+        jLabel15.setText("Agilidad Mental:");
+
+        agilidadmental1.setValue(100);
+
+        jLabel14.setText("Universo:");
+
+        jLabel13.setText("Vida:");
+
+        javax.swing.GroupLayout jd_modificarLayout = new javax.swing.GroupLayout(jd_modificar.getContentPane());
+        jd_modificar.getContentPane().setLayout(jd_modificarLayout);
+        jd_modificarLayout.setHorizontalGroup(
+            jd_modificarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 413, Short.MAX_VALUE)
+            .addGroup(jd_modificarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jd_modificarLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(jd_modificarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jLabel14)
+                        .addComponent(jLabel17)
+                        .addComponent(jLabel18)
+                        .addComponent(jLabel19))
+                    .addGap(18, 18, 18)
+                    .addGroup(jd_modificarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(nombre1)
+                        .addComponent(universo1, 0, 96, Short.MAX_VALUE)
+                        .addComponent(poder1)
+                        .addComponent(debilidad1))
+                    .addGap(65, 65, 65)
+                    .addGroup(jd_modificarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jLabel13)
+                        .addComponent(jLabel15)
+                        .addComponent(jLabel16)
+                        .addComponent(jLabel20))
+                    .addGap(18, 18, 18)
+                    .addGroup(jd_modificarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(vida1)
+                        .addComponent(agilidadfisica1)
+                        .addComponent(fuerza1)
+                        .addComponent(agilidadmental1))
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+        jd_modificarLayout.setVerticalGroup(
+            jd_modificarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(jd_modificarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jd_modificarLayout.createSequentialGroup()
+                    .addGap(79, 79, 79)
+                    .addGroup(jd_modificarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jd_modificarLayout.createSequentialGroup()
+                            .addGroup(jd_modificarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel19)
+                                .addComponent(nombre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(18, 18, 18)
+                            .addGroup(jd_modificarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(poder1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(0, 0, Short.MAX_VALUE))
+                        .addGroup(jd_modificarLayout.createSequentialGroup()
+                            .addGroup(jd_modificarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel20)
+                                .addComponent(fuerza1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(18, 18, 18)
+                            .addGroup(jd_modificarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel16)
+                                .addComponent(agilidadfisica1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(18, 18, 18)
+                            .addGroup(jd_modificarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel15)
+                                .addComponent(agilidadmental1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(debilidad1)
+                                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(18, 18, 18)
+                            .addGroup(jd_modificarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel13)
+                                .addComponent(vida1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(universo1)
+                                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGap(79, 79, 79)))
+        );
+
+        javax.swing.GroupLayout jd_batallaLayout = new javax.swing.GroupLayout(jd_batalla.getContentPane());
+        jd_batalla.getContentPane().setLayout(jd_batallaLayout);
+        jd_batallaLayout.setHorizontalGroup(
+            jd_batallaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 534, Short.MAX_VALUE)
+        );
+        jd_batallaLayout.setVerticalGroup(
+            jd_batallaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 406, Short.MAX_VALUE)
+        );
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel10.setFont(new java.awt.Font("Segoe UI Emoji", 1, 24)); // NOI18N
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setText("Bienvenido a Marvel vs DC vs Capcom vs Mortal Kombatientes");
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel11.setText("Elija que quiere hacer");
+
+        jb_listar.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jb_listar.setText("Listar Personajes");
+        jb_listar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_listarMouseClicked(evt);
+            }
+        });
+
+        jb_batalla.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jb_batalla.setText("Batalla");
+
+        jb_agregar.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jb_agregar.setText("Agregar Personajes");
+        jb_agregar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_agregarMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(246, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(227, 227, 227))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(agregar, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel9)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel5))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(nombre)
-                            .addComponent(poder)
-                            .addComponent(debilidad)
-                            .addComponent(universo, 0, 96, Short.MAX_VALUE)
-                            .addComponent(fuerza)
-                            .addComponent(agilidadfisica)
-                            .addComponent(agilidadmental)
-                            .addComponent(vida))))
-                .addGap(68, 68, 68)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1)
-                    .addComponent(jScrollPane2))
+                .addGap(70, 70, 70)
+                .addComponent(jb_agregar)
+                .addGap(38, 38, 38)
+                .addComponent(jb_listar, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addComponent(jb_batalla, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(253, 253, 253))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(jLabel1)
-                        .addGap(26, 26, 26)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(poder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(debilidad))
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(universo)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(22, 22, 22)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
-                            .addComponent(fuerza, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(73, 73, 73)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(27, 27, 27)
+                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7)
-                            .addComponent(agilidadfisica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel8)
-                            .addComponent(agilidadmental, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel9)
-                            .addComponent(vida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(agregar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(94, 94, 94)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jb_batalla, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jb_listar, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jb_agregar, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(125, Short.MAX_VALUE))
         );
 
         pack();
@@ -205,28 +497,126 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_agregarActionPerformed
 
     private void agregarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_agregarMouseClicked
-        if (nombre.getText().isBlank()|| poder.getText().isBlank()||debilidad.getText().isBlank()) {
+        if (nombre.getText().isBlank() || poder.getText().isBlank() || debilidad.getText().isBlank()) {
             JOptionPane.showMessageDialog(this, "Hay almenos un espacio en blanco y no se puede");
-        }else{
-            personajes.add(new Personaje(nombre.getText(), poder.getText(), debilidad.getText(), (String)universo.getSelectedItem(), (Integer)fuerza.getValue(), (Integer)agilidadfisica.getValue(), (Integer)agilidadmental.getValue(), (Integer)vida.getValue()));
+        } else {
+            personajes.add(new Personaje(nombre.getText(), poder.getText(), debilidad.getText(), (String) universo.getSelectedItem(), (Integer) fuerza.getValue(), (Integer) agilidadfisica.getValue(), (Integer) agilidadmental.getValue(), (Integer) vida.getValue()));
             DefaultTreeModel modelo = (DefaultTreeModel) jt_arbol.getModel();
             DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) modelo.getRoot();
-            DefaultMutableTreeNode name = new DefaultMutableTreeNode(nombre.getText());
-            if (((String)universo.getSelectedItem()).equalsIgnoreCase("DC")) {
+            DefaultMutableTreeNode name = new DefaultMutableTreeNode(new Personaje(nombre.getText(), poder.getText(), debilidad.getText(), (String) universo.getSelectedItem(), (Integer) fuerza.getValue(), (Integer) agilidadfisica.getValue(), (Integer) agilidadmental.getValue(), (Integer) vida.getValue()));
+            if (((String) universo.getSelectedItem()).equalsIgnoreCase("DC")) {
                 ((DefaultMutableTreeNode) raiz.getChildAt(0)).add(name);
-            }else if(((String)universo.getSelectedItem()).equalsIgnoreCase("Marvel")) {
+                dclista.add(new Personaje(nombre.getText(), poder.getText(), debilidad.getText(), (String) universo.getSelectedItem(), (Integer) fuerza.getValue(), (Integer) agilidadfisica.getValue(), (Integer) agilidadmental.getValue(), (Integer) vida.getValue()));
+            } else if (((String) universo.getSelectedItem()).equalsIgnoreCase("Marvel")) {
                 ((DefaultMutableTreeNode) raiz.getChildAt(1)).add(name);
-            }else if(((String)universo.getSelectedItem()).equalsIgnoreCase("Capcom")) {
+                marvellista.add(new Personaje(nombre.getText(), poder.getText(), debilidad.getText(), (String) universo.getSelectedItem(), (Integer) fuerza.getValue(), (Integer) agilidadfisica.getValue(), (Integer) agilidadmental.getValue(), (Integer) vida.getValue()));
+            } else if (((String) universo.getSelectedItem()).equalsIgnoreCase("Capcom")) {
                 ((DefaultMutableTreeNode) raiz.getChildAt(2)).add(name);
-            }else if(((String)universo.getSelectedItem()).equalsIgnoreCase("MK")) {
+                capcomlista.add(new Personaje(nombre.getText(), poder.getText(), debilidad.getText(), (String) universo.getSelectedItem(), (Integer) fuerza.getValue(), (Integer) agilidadfisica.getValue(), (Integer) agilidadmental.getValue(), (Integer) vida.getValue()));
+            } else if (((String) universo.getSelectedItem()).equalsIgnoreCase("MK")) {
                 ((DefaultMutableTreeNode) raiz.getChildAt(3)).add(name);
-            }else{
-                JOptionPane.showMessageDialog(this, "Este universo no existe chavalo");
+                mklista.add(new Personaje(nombre.getText(), poder.getText(), debilidad.getText(), (String) universo.getSelectedItem(), (Integer) fuerza.getValue(), (Integer) agilidadfisica.getValue(), (Integer) agilidadmental.getValue(), (Integer) vida.getValue()));
             }
+            JOptionPane.showMessageDialog(JF_agregar, "Se agrego " + nombre.getText() + " a " + (String) universo.getSelectedItem());
             modelo.reload();
-            nombre.setText(""); poder.setText("");debilidad.setText("");universo.setSelectedIndex(0);fuerza.setValue(100);agilidadmental.setValue(100);agilidadfisica.setValue(100);vida.setValue(100);
+            nombre.setText("");
+            poder.setText("");
+            debilidad.setText("");
+            universo.setSelectedIndex(0);
+            fuerza.setValue(100);
+            agilidadmental.setValue(100);
+            agilidadfisica.setValue(100);
+            vida.setValue(100);
         }
     }//GEN-LAST:event_agregarMouseClicked
+
+    private void jt_arbolMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jt_arbolMouseClicked
+        if (evt.getButton() == 3) {
+            DefaultTreeModel modelo = (DefaultTreeModel) jt_arbol.getModel();
+            DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) modelo.getRoot();
+            int row = jt_arbol.getClosestRowForLocation(
+                    evt.getX(), evt.getY());
+            jt_arbol.setSelectionRow(row);
+            Object v1
+                    = jt_arbol.getSelectionPath().
+                            getLastPathComponent();
+            nodo_seleccionado = (DefaultMutableTreeNode) v1;
+            if (nodo_seleccionado.getUserObject() instanceof Personaje) {
+                pp_deltree.show(evt.getComponent(), evt.getX(), evt.getY());
+
+                jt_nombredelmaje.setText(((Personaje) nodo_seleccionado.getUserObject()).toString());
+                DefaultListModel nuevomodelo = (DefaultListModel) jl_listaloca.getModel();
+                nuevomodelo.removeAllElements();
+//                    nuevomodelo.addElement(((Personaje)nodo_seleccionado.getUserObject()).todo());
+                nuevomodelo.addElement("Poder -> " + ((Personaje) nodo_seleccionado.getUserObject()).getPoder());
+                nuevomodelo.addElement("Debilidad -> " + ((Personaje) nodo_seleccionado.getUserObject()).getDebilidad());
+                nuevomodelo.addElement("Universo -> " + ((Personaje) nodo_seleccionado.getUserObject()).getUniverso());
+                nuevomodelo.addElement("Fuerza -> " + ((Personaje) nodo_seleccionado.getUserObject()).getFuerza());
+                nuevomodelo.addElement("Agilidad Fisica -> " + ((Personaje) nodo_seleccionado.getUserObject()).getAgilidadfisica());
+                nuevomodelo.addElement("Agilidad Mental -> " + ((Personaje) nodo_seleccionado.getUserObject()).getAgilidadmental());
+                nuevomodelo.addElement("Puntos de Vida -> " + ((Personaje) nodo_seleccionado.getUserObject()).getHp());
+
+                jl_listaloca.setModel(nuevomodelo);
+            } else if (raiz.isNodeChild(nodo_seleccionado)) {
+                jt_nombredelmaje.setText("");
+                DefaultListModel nuevomodelo2 = (DefaultListModel) jl_listaloca.getModel();
+                nuevomodelo2.removeAllElements();
+                for (int i = 0; i < nodo_seleccionado.getChildCount(); i++) {
+                    nuevomodelo2.addElement((nodo_seleccionado.getChildAt(i)));
+                }
+                jl_listaloca.setModel(nuevomodelo2);
+            }
+        }
+    }//GEN-LAST:event_jt_arbolMouseClicked
+
+    private void mi_modificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mi_modificarActionPerformed
+
+    }//GEN-LAST:event_mi_modificarActionPerformed
+
+    private void mi_eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mi_eliminarActionPerformed
+        DefaultTreeModel modelo = (DefaultTreeModel) jt_arbol.getModel();
+        DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) modelo.getRoot();
+        DefaultListModel nuevomodelo = (DefaultListModel) jl_listaloca.getModel();
+        Object v1
+                = jt_arbol.getSelectionPath().
+                        getLastPathComponent();
+        nodo_seleccionado = (DefaultMutableTreeNode) v1;
+        if (nodo_seleccionado.getUserObject() instanceof Personaje){
+            nodo_seleccionado.removeFromParent();
+        }
+        nuevomodelo.removeAllElements();
+        jt_nombredelmaje.setText("");
+        jl_listaloca.setModel(nuevomodelo);
+        modelo.reload();
+    }//GEN-LAST:event_mi_eliminarActionPerformed
+
+    private void jb_agregarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_agregarMouseClicked
+
+        JF_agregar.setLocationRelativeTo(this);
+        JF_agregar.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jb_agregarMouseClicked
+
+    private void agregar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_agregar1MouseClicked
+        JF_agregar.setVisible(false);
+        this.setVisible(true);
+    }//GEN-LAST:event_agregar1MouseClicked
+
+    private void agregar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_agregar1ActionPerformed
+
+    private void jb_listarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_listarMouseClicked
+        this.setVisible(false);
+        JF_listar.setVisible(true);
+        JF_listar.setLocationRelativeTo(this);
+        jt_nombredelmaje.setEditable(false);
+    }//GEN-LAST:event_jb_listarMouseClicked
+
+    private void SALIRMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SALIRMouseClicked
+        JF_listar.setVisible(false);
+        this.setVisible(true);
+    }//GEN-LAST:event_SALIRMouseClicked
 
     /**
      * @param args the command line arguments
@@ -264,13 +654,32 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JFrame JF_agregar;
+    private javax.swing.JFrame JF_listar;
+    private javax.swing.JButton SALIR;
     private javax.swing.JSpinner agilidadfisica;
+    private javax.swing.JSpinner agilidadfisica1;
     private javax.swing.JSpinner agilidadmental;
+    private javax.swing.JSpinner agilidadmental1;
     private javax.swing.JButton agregar;
+    private javax.swing.JButton agregar1;
     private javax.swing.JTextField debilidad;
+    private javax.swing.JTextField debilidad1;
     private javax.swing.JSpinner fuerza;
+    private javax.swing.JSpinner fuerza1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -278,14 +687,33 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JList<String> jList1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JButton jb_agregar;
+    private javax.swing.JButton jb_batalla;
+    private javax.swing.JButton jb_listar;
+    private javax.swing.JDialog jd_batalla;
+    private javax.swing.JDialog jd_modificar;
+    private javax.swing.JList<String> jl_listaloca;
     private javax.swing.JTree jt_arbol;
+    private javax.swing.JTextField jt_nombredelmaje;
+    private javax.swing.JMenuItem mi_eliminar;
+    private javax.swing.JMenuItem mi_modificar;
     private javax.swing.JTextField nombre;
+    private javax.swing.JTextField nombre1;
     private javax.swing.JTextField poder;
+    private javax.swing.JTextField poder1;
+    private javax.swing.JPopupMenu pp_deltree;
     private javax.swing.JComboBox<String> universo;
+    private javax.swing.JComboBox<String> universo1;
     private javax.swing.JSpinner vida;
+    private javax.swing.JSpinner vida1;
     // End of variables declaration//GEN-END:variables
     ArrayList<Personaje> personajes = new ArrayList();
+    ArrayList<Personaje> dclista = new ArrayList();
+    ArrayList<Personaje> marvellista = new ArrayList();
+    ArrayList<Personaje> capcomlista = new ArrayList();
+    ArrayList<Personaje> mklista = new ArrayList();
+    DefaultMutableTreeNode nodo_seleccionado;
+
 }
