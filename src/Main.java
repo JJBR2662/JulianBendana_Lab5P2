@@ -2,6 +2,8 @@
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.DefaultListModel;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
 
 
 public class Main extends javax.swing.JFrame {
@@ -41,7 +43,7 @@ public class Main extends javax.swing.JFrame {
         vida = new javax.swing.JSpinner();
         agregar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTree1 = new javax.swing.JTree();
+        jt_arbol = new javax.swing.JTree();
         jScrollPane2 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
 
@@ -96,8 +98,8 @@ public class Main extends javax.swing.JFrame {
         treeNode1.add(treeNode2);
         treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("MK");
         treeNode1.add(treeNode2);
-        jTree1.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
-        jScrollPane1.setViewportView(jTree1);
+        jt_arbol.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jScrollPane1.setViewportView(jt_arbol);
 
         jList1.setModel(new DefaultListModel());
         jScrollPane2.setViewportView(jList1);
@@ -207,7 +209,21 @@ public class Main extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Hay almenos un espacio en blanco y no se puede");
         }else{
             personajes.add(new Personaje(nombre.getText(), poder.getText(), debilidad.getText(), (String)universo.getSelectedItem(), (Integer)fuerza.getValue(), (Integer)agilidadfisica.getValue(), (Integer)agilidadmental.getValue(), (Integer)vida.getValue()));
-            
+            DefaultTreeModel modelo = (DefaultTreeModel) jt_arbol.getModel();
+            DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) modelo.getRoot();
+            DefaultMutableTreeNode name = new DefaultMutableTreeNode(nombre.getText());
+            if (((String)universo.getSelectedItem()).equalsIgnoreCase("DC")) {
+                ((DefaultMutableTreeNode) raiz.getChildAt(0)).add(name);
+            }else if(((String)universo.getSelectedItem()).equalsIgnoreCase("Marvel")) {
+                ((DefaultMutableTreeNode) raiz.getChildAt(1)).add(name);
+            }else if(((String)universo.getSelectedItem()).equalsIgnoreCase("Capcom")) {
+                ((DefaultMutableTreeNode) raiz.getChildAt(2)).add(name);
+            }else if(((String)universo.getSelectedItem()).equalsIgnoreCase("MK")) {
+                ((DefaultMutableTreeNode) raiz.getChildAt(3)).add(name);
+            }else{
+                JOptionPane.showMessageDialog(this, "Este universo no existe chavalo");
+            }
+            modelo.reload();
             nombre.setText(""); poder.setText("");debilidad.setText("");universo.setSelectedIndex(0);fuerza.setValue(100);agilidadmental.setValue(100);agilidadfisica.setValue(100);vida.setValue(100);
         }
     }//GEN-LAST:event_agregarMouseClicked
@@ -265,7 +281,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JList<String> jList1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTree jTree1;
+    private javax.swing.JTree jt_arbol;
     private javax.swing.JTextField nombre;
     private javax.swing.JTextField poder;
     private javax.swing.JComboBox<String> universo;
