@@ -73,6 +73,14 @@ public class Main extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jd_batalla = new javax.swing.JDialog();
+        cb_universo1 = new javax.swing.JComboBox<>();
+        cb_universo2 = new javax.swing.JComboBox<>();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        lista11111 = new javax.swing.JList<>();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        lista2 = new javax.swing.JList<>();
+        jButton1 = new javax.swing.JButton();
+        OTROSALIR = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jb_listar = new javax.swing.JButton();
@@ -96,7 +104,6 @@ public class Main extends javax.swing.JFrame {
         pp_deltree.add(mi_eliminar);
 
         JF_agregar.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        JF_agregar.setPreferredSize(new java.awt.Dimension(508, 400));
         JF_agregar.setSize(new java.awt.Dimension(508, 400));
 
         jLabel1.setText("Agregar Personajes ");
@@ -411,15 +418,83 @@ public class Main extends javax.swing.JFrame {
                     .addGap(79, 79, 79)))
         );
 
+        jd_batalla.setPreferredSize(new java.awt.Dimension(500, 500));
+        jd_batalla.setSize(new java.awt.Dimension(500, 500));
+
+        cb_universo1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "DC", "Marvel", "Capcom", "MK" }));
+        cb_universo1.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cb_universo1ItemStateChanged(evt);
+            }
+        });
+        cb_universo1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cb_universo1MouseClicked(evt);
+            }
+        });
+
+        cb_universo2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "DC", "Marvel", "Capcom", "MK" }));
+        cb_universo2.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cb_universo2ItemStateChanged(evt);
+            }
+        });
+
+        lista11111.setModel(new DefaultListModel());
+        jScrollPane3.setViewportView(lista11111);
+
+        lista2.setModel(new DefaultListModel());
+        jScrollPane4.setViewportView(lista2);
+
+        jButton1.setText("Batallar");
+
+        OTROSALIR.setText("SALIR");
+        OTROSALIR.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                OTROSALIRMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jd_batallaLayout = new javax.swing.GroupLayout(jd_batalla.getContentPane());
         jd_batalla.getContentPane().setLayout(jd_batallaLayout);
         jd_batallaLayout.setHorizontalGroup(
             jd_batallaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 534, Short.MAX_VALUE)
+            .addGroup(jd_batallaLayout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addGroup(jd_batallaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cb_universo1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jd_batallaLayout.createSequentialGroup()
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(29, 29, 29)
+                        .addGroup(jd_batallaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(OTROSALIR, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE))))
+                .addGap(38, 38, 38)
+                .addGroup(jd_batallaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(cb_universo2, 0, 97, Short.MAX_VALUE))
+                .addContainerGap(93, Short.MAX_VALUE))
         );
         jd_batallaLayout.setVerticalGroup(
             jd_batallaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 406, Short.MAX_VALUE)
+            .addGroup(jd_batallaLayout.createSequentialGroup()
+                .addGap(73, 73, 73)
+                .addGroup(jd_batallaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cb_universo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cb_universo2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jd_batallaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_batallaLayout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addGroup(jd_batallaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane3)
+                            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_batallaLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 191, Short.MAX_VALUE)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(50, 50, 50)
+                        .addComponent(OTROSALIR, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(57, 57, 57))))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -442,6 +517,11 @@ public class Main extends javax.swing.JFrame {
 
         jb_batalla.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         jb_batalla.setText("Batalla");
+        jb_batalla.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_batallaMouseClicked(evt);
+            }
+        });
 
         jb_agregar.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         jb_agregar.setText("Agregar Personajes");
@@ -545,18 +625,18 @@ public class Main extends javax.swing.JFrame {
                 pp_deltree.show(evt.getComponent(), evt.getX(), evt.getY());
 
                 jt_nombredelmaje.setText(((Personaje) nodo_seleccionado.getUserObject()).toString());
-                DefaultListModel nuevomodelo = (DefaultListModel) jl_listaloca.getModel();
-                nuevomodelo.removeAllElements();
+                DefaultListModel nuevomodelo1 = (DefaultListModel) jl_listaloca.getModel();
+                nuevomodelo1.removeAllElements();
 //                    nuevomodelo.addElement(((Personaje)nodo_seleccionado.getUserObject()).todo());
-                nuevomodelo.addElement("Poder -> " + ((Personaje) nodo_seleccionado.getUserObject()).getPoder());
-                nuevomodelo.addElement("Debilidad -> " + ((Personaje) nodo_seleccionado.getUserObject()).getDebilidad());
-                nuevomodelo.addElement("Universo -> " + ((Personaje) nodo_seleccionado.getUserObject()).getUniverso());
-                nuevomodelo.addElement("Fuerza -> " + ((Personaje) nodo_seleccionado.getUserObject()).getFuerza());
-                nuevomodelo.addElement("Agilidad Fisica -> " + ((Personaje) nodo_seleccionado.getUserObject()).getAgilidadfisica());
-                nuevomodelo.addElement("Agilidad Mental -> " + ((Personaje) nodo_seleccionado.getUserObject()).getAgilidadmental());
-                nuevomodelo.addElement("Puntos de Vida -> " + ((Personaje) nodo_seleccionado.getUserObject()).getHp());
+                nuevomodelo1.addElement("Poder -> " + ((Personaje) nodo_seleccionado.getUserObject()).getPoder());
+                nuevomodelo1.addElement("Debilidad -> " + ((Personaje) nodo_seleccionado.getUserObject()).getDebilidad());
+                nuevomodelo1.addElement("Universo -> " + ((Personaje) nodo_seleccionado.getUserObject()).getUniverso());
+                nuevomodelo1.addElement("Fuerza -> " + ((Personaje) nodo_seleccionado.getUserObject()).getFuerza());
+                nuevomodelo1.addElement("Agilidad Fisica -> " + ((Personaje) nodo_seleccionado.getUserObject()).getAgilidadfisica());
+                nuevomodelo1.addElement("Agilidad Mental -> " + ((Personaje) nodo_seleccionado.getUserObject()).getAgilidadmental());
+                nuevomodelo1.addElement("Puntos de Vida -> " + ((Personaje) nodo_seleccionado.getUserObject()).getHp());
 
-                jl_listaloca.setModel(nuevomodelo);
+                jl_listaloca.setModel(nuevomodelo1);
             } else if (raiz.isNodeChild(nodo_seleccionado)) {
                 jt_nombredelmaje.setText("");
                 DefaultListModel nuevomodelo2 = (DefaultListModel) jl_listaloca.getModel();
@@ -576,17 +656,17 @@ public class Main extends javax.swing.JFrame {
     private void mi_eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mi_eliminarActionPerformed
         DefaultTreeModel modelo = (DefaultTreeModel) jt_arbol.getModel();
         DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) modelo.getRoot();
-        DefaultListModel nuevomodelo = (DefaultListModel) jl_listaloca.getModel();
+        DefaultListModel nuevomodelo5 = (DefaultListModel) jl_listaloca.getModel();
         Object v1
                 = jt_arbol.getSelectionPath().
                         getLastPathComponent();
         nodo_seleccionado = (DefaultMutableTreeNode) v1;
-        if (nodo_seleccionado.getUserObject() instanceof Personaje){
+        if (nodo_seleccionado.getUserObject() instanceof Personaje) {
             nodo_seleccionado.removeFromParent();
         }
-        nuevomodelo.removeAllElements();
+        nuevomodelo5.removeAllElements();
         jt_nombredelmaje.setText("");
-        jl_listaloca.setModel(nuevomodelo);
+        jl_listaloca.setModel(nuevomodelo5);
         modelo.reload();
     }//GEN-LAST:event_mi_eliminarActionPerformed
 
@@ -607,6 +687,9 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_agregar1ActionPerformed
 
     private void jb_listarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_listarMouseClicked
+        DefaultListModel nuevomodelo9 = (DefaultListModel) jl_listaloca.getModel();
+        nuevomodelo9.removeAllElements();
+        jl_listaloca.setModel(nuevomodelo9);
         this.setVisible(false);
         JF_listar.setVisible(true);
         JF_listar.setLocationRelativeTo(this);
@@ -617,6 +700,73 @@ public class Main extends javax.swing.JFrame {
         JF_listar.setVisible(false);
         this.setVisible(true);
     }//GEN-LAST:event_SALIRMouseClicked
+
+    private void cb_universo1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cb_universo1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cb_universo1MouseClicked
+
+    private void cb_universo1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cb_universo1ItemStateChanged
+        DefaultListModel nuevomodelo6 = (DefaultListModel) jl_listaloca.getModel();
+        nuevomodelo6.removeAllElements();
+        if (((String) cb_universo1.getSelectedItem()).equalsIgnoreCase("dc")) {
+            for (Personaje d : dclista) {
+                nuevomodelo6.addElement(d);
+            }
+        } else if (((String) cb_universo1.getSelectedItem()).equalsIgnoreCase("marvel")) {
+            for (Personaje d : marvellista) {
+                nuevomodelo6.addElement(d);
+            }
+        } else if (((String) cb_universo1.getSelectedItem()).equalsIgnoreCase("capcom")) {
+            for (Personaje d : capcomlista) {
+                nuevomodelo6.addElement(d);
+            }
+        } else if (((String) cb_universo1.getSelectedItem()).equalsIgnoreCase("mk")) {
+            for (Personaje d : mklista) {
+                nuevomodelo6.addElement(d);
+            }
+        }
+        lista11111.setModel(nuevomodelo6);
+    }//GEN-LAST:event_cb_universo1ItemStateChanged
+
+    private void jb_batallaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_batallaMouseClicked
+        DefaultListModel nuevomodelo7 = (DefaultListModel) lista11111.getModel();
+        nuevomodelo7.removeAllElements();
+        lista11111.setModel(nuevomodelo7);
+        DefaultListModel nuevomodelo10 = (DefaultListModel) lista2.getModel();
+        nuevomodelo10.removeAllElements();
+        lista2.setModel(nuevomodelo10);
+        jd_batalla.setVisible(true);
+        jd_batalla.setLocationRelativeTo(this);
+        this.setVisible(false);
+    }//GEN-LAST:event_jb_batallaMouseClicked
+
+    private void OTROSALIRMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OTROSALIRMouseClicked
+        jd_batalla.setVisible(false);
+        this.setVisible(true);
+    }//GEN-LAST:event_OTROSALIRMouseClicked
+
+    private void cb_universo2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cb_universo2ItemStateChanged
+        DefaultListModel nuevomodelo3 = (DefaultListModel) lista2.getModel();
+        nuevomodelo3.removeAllElements();
+        if (((String) cb_universo1.getSelectedItem()).equalsIgnoreCase("dc")) {
+            for (Personaje d : dclista) {
+                nuevomodelo3.addElement(d);
+            }
+        } else if (((String) cb_universo1.getSelectedItem()).equalsIgnoreCase("marvel")) {
+            for (Personaje d : marvellista) {
+                nuevomodelo3.addElement(d);
+            }
+        } else if (((String) cb_universo1.getSelectedItem()).equalsIgnoreCase("capcom")) {
+            for (Personaje d : capcomlista) {
+                nuevomodelo3.addElement(d);
+            }
+        } else if (((String) cb_universo1.getSelectedItem()).equalsIgnoreCase("mk")) {
+            for (Personaje d : mklista) {
+                nuevomodelo3.addElement(d);
+            }
+        }
+        lista2.setModel(nuevomodelo3);
+    }//GEN-LAST:event_cb_universo2ItemStateChanged
 
     /**
      * @param args the command line arguments
@@ -656,6 +806,7 @@ public class Main extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JFrame JF_agregar;
     private javax.swing.JFrame JF_listar;
+    private javax.swing.JButton OTROSALIR;
     private javax.swing.JButton SALIR;
     private javax.swing.JSpinner agilidadfisica;
     private javax.swing.JSpinner agilidadfisica1;
@@ -663,10 +814,13 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JSpinner agilidadmental1;
     private javax.swing.JButton agregar;
     private javax.swing.JButton agregar1;
+    private javax.swing.JComboBox<String> cb_universo1;
+    private javax.swing.JComboBox<String> cb_universo2;
     private javax.swing.JTextField debilidad;
     private javax.swing.JTextField debilidad1;
     private javax.swing.JSpinner fuerza;
     private javax.swing.JSpinner fuerza1;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -689,6 +843,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JButton jb_agregar;
     private javax.swing.JButton jb_batalla;
     private javax.swing.JButton jb_listar;
@@ -697,6 +853,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JList<String> jl_listaloca;
     private javax.swing.JTree jt_arbol;
     private javax.swing.JTextField jt_nombredelmaje;
+    private javax.swing.JList<String> lista11111;
+    private javax.swing.JList<String> lista2;
     private javax.swing.JMenuItem mi_eliminar;
     private javax.swing.JMenuItem mi_modificar;
     private javax.swing.JTextField nombre;
