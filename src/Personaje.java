@@ -86,7 +86,7 @@ public class Personaje {
     }
     
     public String todo(){
-        return "Poder -> "+poder+"\nDebilidad -> "+debilidad+"\nUniverso -> "+universo+"\nFuerza -> "+fuerza+"\nAgilidad Fisica -> "+agilidadfisica+"\nAgilidad Mental -> "+agilidadmental+"\nPuntos de Vida -> "+hp;
+        return "Nombre -> "+nombre+"\nPoder -> "+poder+"\nDebilidad -> "+debilidad+"\nUniverso -> "+universo+"\nFuerza -> "+fuerza+"\nAgilidad Fisica -> "+agilidadfisica+"\nAgilidad Mental -> "+agilidadmental+"\nPuntos de Vida -> "+hp;
     }
     
     
